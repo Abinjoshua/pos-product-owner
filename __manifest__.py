@@ -15,7 +15,12 @@
              ],
     'assets': {
         'point_of_sale._assets_pos': [
-            'pos_product_owner/static/src/**/*',
+            # 'pos_product_owner/static/src/**/*',
+            'pos_product_owner/static/src/xml/custom_receipt.xml',
+            'pos_product_owner/static/src/js/order_line.js',
+            'pos_product_owner/static/src/js/order_receipt.js',
+            'pos_product_owner/static/src/xml/pos_order_line.xml',
+            'pos_product_owner/static/src/xml/default_code_receipt.xml',
         ],
     }
 }

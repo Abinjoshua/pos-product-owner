@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <template xml:space="preserve">
-    <t t-name="Orderline" t-inherit="point_of_sale.orderline"
+    <t t-name="Orderline" t-inherit="point_of_sale.Orderline"
        t-inherit-mode="extension">
-        <xpath expr="//li[hasclass('orderline')]/div[hasclass('d-flex')]"
-               position="after">
+        <xpath expr="//span[hasclass('text-wrap d-inline')]"
+               position="inside">
             <br/>
-            <t t-if="line.product_owner_id[1]">
-                    <span><b>Product Owner:</b>
-                        <t t-esc="line.product_owner_id[1]"/>
-                    </span>
+            <t t-if="this.props.line.product_id.product_owner_id">
+                <t t-esc='ProductOwner'/>
             </t>
         </xpath>
     </t>
