@@ -12,6 +12,5 @@ class ProductTemplate(models.Model):
         """Return fields to be loaded into the POS."""
         data = super()._load_pos_data_fields(config_id)
         data.append('product_owner_id')
-        print(data)
         return data
 

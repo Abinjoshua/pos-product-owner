@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+   <t t-name="default_code_pos_receipt.OrderReceipt"
+      t-inherit="point_of_sale.OrderReceipt"
+      t-inherit-mode="extension">
+        <xpath expr="//Orderline" position="inside">
+            <t>
+                <t t-esc='line.product_id.default_code'/>
+            </t>
+       </xpath>
+   </t>
+</templates>
